@@ -53,7 +53,7 @@ const difference = computed(() => {
     width: 500px;
   }
   #russian {
-    background-color: green;
+    background-color: brown;
   }
 
   #german {

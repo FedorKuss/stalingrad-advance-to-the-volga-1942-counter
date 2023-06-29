@@ -5,4 +5,8 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   base:'stalingrad-advance-to-the-volga-1942-counter',
   plugins: [vue()],
+  build: {
+    outDir: 'docs'
+  }
 })
+
