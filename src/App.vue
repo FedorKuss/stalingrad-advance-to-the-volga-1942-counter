@@ -22,14 +22,14 @@ const difference = computed(() => {
 
 <template>
   <section id="russian">
-    <span>Russian</span>
+    <h3>Russian</h3>
     <h2>Defense Total {{ countRussian }}</h2>
     <br/>
     <button type="button" @click="countRussian++">+</button>
     <button type="button" @click="countRussian--">-</button>
   </section>
   <section id="german">
-    <span>German</span>
+    <h3>German</h3>
     <h2>Atack Total {{ countGerman }}</h2>
     <br/>
     <button type="button" @click="countGerman++">+</button>
@@ -47,6 +47,11 @@ const difference = computed(() => {
 </template>
 
 <style scoped>
+  h3 {
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 10px;
+  }
   section {
     display: flex;
     flex-direction: column;
@@ -54,13 +59,22 @@ const difference = computed(() => {
   }
   #russian {
     background-color: brown;
+
+    h3{
+      background-color: black;
+    }
   }
 
   #german {
     background-color: black;
+
+    h3{
+      background-color: brown;
+    }
   }
 
   button {
     margin: 10px;
+    min-height: 4rem;
   }
 </style>
