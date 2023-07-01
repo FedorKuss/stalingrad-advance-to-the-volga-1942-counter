@@ -65,6 +65,9 @@ const reset = () => {
     font-size: 1.5rem;
     margin-bottom: 0;
   }
+  p {
+    font-size: 1.3rem;
+  }
   section {
     display: flex;
     flex-direction: column;
