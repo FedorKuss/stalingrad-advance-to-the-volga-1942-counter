@@ -59,18 +59,18 @@ const difference = computed(() => {
   }
   #russian {
     background-color: brown;
+  }
 
-    h3{
+  #russian h3{
       background-color: black;
-    }
   }
 
   #german {
     background-color: black;
+  }
 
-    h3{
-      background-color: brown;
-    }
+  #german h3{
+    background-color: brown;
   }
 
   button {
