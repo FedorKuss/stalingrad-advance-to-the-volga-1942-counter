@@ -20,6 +20,26 @@ const difference = computed(() => {
   }
 });
 
+const incrementCountGerman = () => {
+  countGerman.value++;
+};
+
+const decrementCountGerman = () => {
+  if (countGerman.value > 0) {
+    countGerman.value--;
+  }
+};
+
+const incrementCountRussian = () => {
+  countRussian.value++;
+};
+
+const decrementCountRussian = () => {
+  if (countRussian.value > 0) {
+    countRussian.value--;
+  }
+};
+
 const reset = () => {
   countRussian.value = 0;
   countGerman.value = 0;
@@ -32,15 +52,15 @@ const reset = () => {
     <h3>Russian</h3>
     <h2>Defense Total {{ countRussian }}</h2>
     <br/>
-    <button class="counter" type="button" @click="countRussian++">+</button>
-    <button class="counter" type="button" @click="countRussian--">-</button>
+    <button class="counter" type="button" @click="incrementCountRussian">+</button>
+    <button class="counter" type="button" @click="decrementCountRussian">-</button>
   </section>
   <section id="german">
     <h3>German</h3>
     <h2>Atack Total {{ countGerman }}</h2>
     <br/>
-    <button class="counter" type="button" @click="countGerman++">+</button>
-    <button class="counter" type="button" @click="countGerman--">-</button>
+    <button class="counter" type="button" @click="incrementCountGerman">+</button>
+    <button class="counter" type="button" @click="decrementCountGerman">-</button>
   </section>
  
   <section id="result">
@@ -71,35 +91,25 @@ const reset = () => {
   section {
     display: flex;
     flex-direction: column;
-    width: 500px;
   }
   #russian {
     background-color: brown;
   }
 
-  /* #russian h3{
-      background-color: black;
-  } */
-
   #german {
     background-color: black;
   }
 
-  /* #german h3{
-    background-color: brown;
-  } */
-
   button {
-    margin: 10px;
-    min-height: 4rem;
+    margin: 5px;
   }
 
   button.counter {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 
   .reset {
     background-color: brown;
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 </style>
