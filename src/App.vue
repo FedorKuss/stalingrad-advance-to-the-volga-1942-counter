@@ -20,30 +20,33 @@ const difference = computed(() => {
   }
 });
 
-const incrementCountGerman = () => {
-  countGerman.value++;
-};
+console.log(difference);
 
-const decrementCountGerman = () => {
-  if (countGerman.value > 0) {
-    countGerman.value--;
-  }
-};
+const { incrementCountGerman, decrementCountGerman, incrementCountRussian, decrementCountRussian, reset } = (() => {
+  const increment = (count) => {
+    count.value++;
+  };
 
-const incrementCountRussian = () => {
-  countRussian.value++;
-};
+  const decrement = (count) => {
+    if (count.value > 0) {
+      count.value--;
+    }
+  };
 
-const decrementCountRussian = () => {
-  if (countRussian.value > 0) {
-    countRussian.value--;
-  }
-};
+  const reset = () => {
+    countRussian.value = 0;
+    countGerman.value = 0;
+  };
 
-const reset = () => {
-  countRussian.value = 0;
-  countGerman.value = 0;
-};
+  return {
+    incrementCountGerman: () => increment(countGerman),
+    decrementCountGerman: () => decrement(countGerman),
+    incrementCountRussian: () => increment(countRussian),
+    decrementCountRussian: () => decrement(countRussian),
+    reset
+  };
+})();
+
 </script>
 
 
